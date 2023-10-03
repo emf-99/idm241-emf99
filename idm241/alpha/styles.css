@@ -5,11 +5,16 @@
     
         --text: var(--color-text);
 
-        margin: 1rem;
-        padding: 1rem;
     }
 
-body { background-color: var(--color-screen);
+body { 
+    background-color: var(--color-screen);
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+    margin: 5rem; 
+    padding: 5rem; 
 }
 
 /* fonts */
@@ -17,8 +22,8 @@ h1 {
     font-family: 'Abril Fatface', cursive;
     letter-spacing: .05rem;
     line-height: 1.6;
-    margin: .5rem;
-    padding: .5rem;
+    margin: 5rem 1rem 1rem 1rem;
+    padding: 1rem;
 }
 
 h3, li { 
@@ -56,12 +61,25 @@ a:visited {
     text-decoration: none;
 }
 
+img {
+    min-width: 75%; 
+    height: auto; 
+    margin: 1rem 5rem 1rem 5rem;
+    padding: 1rem 5rem 1rem 5rem;
+
+}
+
 /* tablet */
 @media (max-width: 1000px) {
 
-    .main2 {
-      overflow-x: hidden;
-    }
+    body {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        margin: 2rem; 
+        padding: 2rem; 
+      }
   
     a:link {
         color: var(--color-pink);
@@ -72,6 +90,10 @@ a:visited {
         color: var(--color-pink);
         text-decoration: underline;
     }
+
+    img {
+        min-width: 50%; 
+    }
     
   }
   
@@ -79,8 +101,12 @@ a:visited {
    @media (max-width: 650px) {
   
     body {
-      margin: 1rem 0rem 5rem 0rem;
-      padding: .25rem;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        flex-direction: column;
+        margin: 2rem; 
+        padding: 2rem; 
     }
   
     h1 {
@@ -93,6 +119,10 @@ a:visited {
   
     li {
       font-size: 1rem;
+    }
+
+    img {
+        max-width: 75%;
     }
     
     }
