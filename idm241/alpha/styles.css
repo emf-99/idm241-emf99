@@ -13,8 +13,8 @@ body {
     justify-content: center; 
     align-items: center; 
     flex-direction: column;
-    margin: 5rem; 
-    padding: 5rem; 
+    margin: 2rem; 
+    padding: 2rem; 
 }
 
 /* fonts */
@@ -77,8 +77,8 @@ img {
         justify-content: center; 
         align-items: center; 
         flex-direction: column;
-        margin: 2rem; 
-        padding: 2rem; 
+        margin: 1rem; 
+        padding: 1rem; 
       }
   
     a:link {
@@ -105,8 +105,8 @@ img {
         justify-content: center; 
         align-items: center; 
         flex-direction: column;
-        margin: 2rem; 
-        padding: 2rem; 
+        margin: .5rem; 
+        padding: .5rem; 
     }
   
     h1 {
@@ -123,6 +123,7 @@ img {
 
     img {
         max-width: 75%;
+        max-height: 75%;
     }
     
     }
