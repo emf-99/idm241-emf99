@@ -22,7 +22,7 @@ h1 {
     font-family: 'Abril Fatface', cursive;
     letter-spacing: .05rem;
     line-height: 1.6;
-    margin: 5rem 1rem 1rem 1rem;
+    margin: 2rem 1rem 1rem 1rem;
     padding: 1rem;
 }
 
@@ -80,6 +80,11 @@ img {
         margin: 1rem; 
         padding: 1rem; 
       }
+
+    h1 {
+        margin: .5rem;
+        padding: .5rem;
+    }
   
     a:link {
         color: var(--color-pink);
@@ -111,6 +116,8 @@ img {
   
     h1 {
       font-size: 1.5rem;
+      margin: .5rem;
+      padding: .5rem;
     } 
   
     h3 {
