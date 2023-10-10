@@ -1,6 +1,6 @@
 :root {
-        --color-screen: #fefef3;
-        --color-pink: #F97E89;
+        --color-screen: #fafaf8;
+        --color-pink: #f85f6c;
         --color-text: #292525;
     
         --text: var(--color-text);
