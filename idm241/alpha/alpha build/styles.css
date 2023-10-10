@@ -56,29 +56,6 @@ p {
 }
 
 
-/* links */
-a.hover-link {
-    color: var(--color-pink); 
-    text-decoration: underline; 
-}
-
-a.hover-link:hover {
-    color: var(--color-pink); 
-    text-decoration: underline; 
-}
-
-a:link {
-    color: var(--color-text);
-    text-decoration: none;
-}
-
-a:visited {
-    color: var(--color-text);
-    text-decoration: none;
-}
-
-
-
 /* MICRO INTERACTION */
 
 /* image container and animation */
@@ -107,11 +84,13 @@ a:visited {
 /* on hover, show the hover image */
 .image_container:hover .hover_image {
     opacity: 1;
+    cursor: pointer;
 }
 
 /* on hover, text color changes to pink */
 .image_container:hover + .product_text .product_name {
     color: var(--color-pink);
+    cursor: pointer;
 }
 
 /* quick shop box on bottom */
@@ -133,16 +112,19 @@ a:visited {
 
 .quickshop_box:hover {
     color: var(--color-pink);
+    cursor: pointer;
 }
 
 .image_container:hover .quickshop_box {
     display: block;
+    cursor: pointer;
 }
 
 
 /* show "Quickshop" box when hovering */
 .image-container:hover .quickshop_box {
     display: block;
+    cursor: pointer;
 }
 
 /* favorites button on top */
@@ -167,10 +149,12 @@ a:visited {
 /* show the favorites button when hovering */
 .image_container:hover .favorites_button {
     opacity: 1;
+    cursor: pointer;
 }
 
 .favorites_button:hover {
     color: var(--color-pink);
+    cursor: pointer;
 }
 
 /* text for product and desc */
