@@ -78,6 +78,7 @@ a:visited {
 }
 
 
+
 /* MICRO INTERACTION */
 
 /* image container and animation */
@@ -113,6 +114,7 @@ a:visited {
     color: var(--color-pink);
 }
 
+/* quick shop box on bottom */
 .quickshop_box {
     display: none;
     position: absolute;
@@ -122,8 +124,8 @@ a:visited {
     background: var(--color-quickshop);
     color: var(--color-text);
     padding: 1rem;
+    font-size: 20px;
     text-align: center;
-    cursor: pointer;
     font-family: 'Karla', sans-serif;
     font-size: 1.25rem;
     letter-spacing: .05rem;
@@ -138,9 +140,37 @@ a:visited {
 }
 
 
-/* Show the "Quickshop" box when hovering over the image-container */
+/* show "Quickshop" box when hovering */
 .image-container:hover .quickshop_box {
     display: block;
+}
+
+/* favorites button on top */
+.favorites_button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: white;
+    color: black;
+    font-size: 20px;
+    padding: 1rem;
+    border-radius: 50%;
+    width: .5rem;
+    height: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    transition: opacity 0.3s ease-in-out; 
+}
+
+/* show the favorites button when hovering */
+.image_container:hover .favorites_button {
+    opacity: 1;
+}
+
+.favorites_button:hover {
+    color: var(--color-pink);
 }
 
 /* text for product and desc */
@@ -157,59 +187,6 @@ p.product_desc {
 
 
 
-/* animation !!! 
-.image-container {
-    height: 500px;
-    width: 333px;
-  }
-
-  .image{ 
-    max-height: 100%;
-    max-width: 100%;
-    background-image: url('images/img1.png');
-    background-size: cover;
-  }
-  
-  .image:hover {
-    background-image: url('images/img2.png');
-    transition: .25s ease-in-out;
-  }
-
-  .image:not(:hover) {
-    background-image: url('images/img1.png');
-    transition: .25s ease-in-out;
-  } */
-
-
-  /* animation that isnt great
-.image_container {
-    width: 333px;
-    height: 500px;
-    position: relative;
-    display: inline-block;
-}
-
-.img1, .img2 {
-    width: 333px;
-    height: 500px;
-}
-
-.image_container .img2 {
-    display: none;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 99;
-}
-
-.image_container:hover .img2 {
-    display: inline;
-    transition: .25s ease-in-out;
-}
-
-.image-container:not(:hover) {
-    transition: .25s ease-in-out;
-} */
 
 
 /* tablet */
@@ -265,6 +242,31 @@ p.product_desc {
     li {
       font-size: 1rem;
     }
+
+    .quickshop_box {
+        padding: .5rem;
+        font-size: 16px;
+        text-align: center;
+        letter-spacing: .025rem;
+    }
+
+    .favorites_button {
+        top: .5rem;
+        right: .5rem;
+        background: white;
+        color: black;
+        font-size: 12px;
+        padding: .5rem;
+        border-radius: 50%;
+        width: .25rem;
+        height: .25rem; 
+    }
+
+    p{
+        font-size: 16px;
+        max-width: 20ch;    
+    }
+    
 
     .image_container {
         max-width: 50%;
