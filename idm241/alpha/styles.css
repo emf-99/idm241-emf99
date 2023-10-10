@@ -1,5 +1,5 @@
 :root {
-        --color-screen: #fbfbf9;
+        --color-screen: #fefef3;
         --color-pink: #F97E89;
         --color-text: #292525;
     
@@ -33,14 +33,27 @@ h3, li {
     padding: .5rem;
 }
 
-li {
+li  {
     font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
     max-width: 80ch;
     letter-spacing: .05rem;
     line-height: 1.6;
     margin: .5rem;
     padding: .5rem;
 }
+
+p {
+    font-family: 'Karla', sans-serif;
+    font-size: 1.25rem;
+    color:  var(--color-pink);
+    max-width: 80ch;
+    letter-spacing: .05rem;
+    line-height: 1.6;
+    margin: .5rem;
+    padding: .5rem;
+}
+
 
 /* links */
 a.hover-link {
