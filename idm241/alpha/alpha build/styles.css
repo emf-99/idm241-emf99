@@ -167,6 +167,8 @@ p.product_desc {
     margin:  0rem;
     padding: 0rem 0rem 0rem 0rem;
     color: var(--color-text);
+    font-size: 1rem;
+
 }
 
 
@@ -194,7 +196,7 @@ p.product_desc {
     }
 
     .image-container {
-        max-width: 75%;
+        max-width: 100%;
     }
     }
     
@@ -251,7 +253,7 @@ p.product_desc {
     
 
     .image_container {
-        max-width: 50%;
+        max-width: 100%;
     }
     }
     
