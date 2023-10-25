@@ -93,8 +93,8 @@ p {
     cursor: pointer;
 }
 
-/* quick shop box on bottom */
-.quickshop_box {
+/* quick shop button on bottom */
+.quickshop_button {
     display: none;
     position: absolute;
     bottom: 0;
@@ -108,21 +108,23 @@ p {
     font-family: 'Karla', sans-serif;
     font-size: 1.25rem;
     letter-spacing: .05rem;
+    border: none;
 }
 
-.quickshop_box:hover {
+.quickshop_button:hover {
     color: var(--color-pink);
     cursor: pointer;
+    transition: 0.3s ease-in-out 0.3s;
 }
 
-.image_container:hover .quickshop_box {
+.image_container:hover .quickshop_button {
     display: block;
     cursor: pointer;
 }
 
 
-/* show "Quickshop" box when hovering */
-.image-container:hover .quickshop_box {
+/* show "Quickshop" button when hovering */
+.image-container:hover .quickshop_button {
     display: block;
     cursor: pointer;
 }
@@ -155,6 +157,7 @@ p {
 .favorites_button:hover {
     color: var(--color-pink);
     cursor: pointer;
+    transition: 0.3s ease-in-out 0.3s;
 }
 
 /* text for product and desc */
@@ -168,9 +171,171 @@ p.product_desc {
     padding: 0rem 0rem 0rem 0rem;
     color: var(--color-text);
     font-size: 1rem;
-
 }
 
+/* modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: 0.3s ease-in-out 0.3s;
+  }
+  
+  .modal_content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 2rem;
+    margin: 2rem;
+    transition: 0.3s ease-in-out 0.3s;
+  }
+  
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    margin: 1rem;
+    cursor: pointer;
+    color: var(--color-text);
+    transition: 0.3s ease-in-out 0.3s;
+  }  
+
+  .close:hover {
+    color: var(--color-pink);
+  } 
+
+  .modal_layout {
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: row;
+  }
+
+  .modal_left {
+    padding: .5rem;
+    margin: .5rem;
+  }
+
+  .modal_right {
+    padding: .5rem;
+    margin: .5rem;
+  }
+
+  .product_name_modal {
+    font-size: 1rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
+  }
+
+  .product_desc_modal, .product_size_modal, .product_color_modal {
+    font-size: .75rem;
+    color: var(--color-text);
+  }
+
+  .product_color_modal, .product_size_modal {
+    padding: .5rem .5rem 0rem .5rem;
+    margin: .5rem .5rem 0rem .5rem;
+  }
+
+  .product_colors {
+    display: flex;
+    flex-direction: row;
+    padding: 0rem .5rem .5rem .5rem;
+  }
+
+  .black_color {
+    width: 1rem;
+    height: 1rem;
+    background-color: black;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+
+   .brown_color {
+    width: 1rem;
+    height: 1rem;
+    background-color: brown;
+    border-radius: 50%;
+    margin: 0.5rem;
+}
+
+.sizes {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: "Karla";
+    font-size: .5rem;
+    color: var(--color-text);
+    margin: 0rem .5rem .5rem .5rem;
+    padding: 0rem .5rem .5rem .5rem;
+  }
+
+  .size {
+    margin: .1rem;
+    padding: .25rem;
+    border: .5px solid var(--color-text);
+  }
+
+  .size:hover {
+    color: var(--color-pink);
+    background-color: var(--color-screen);
+    border: .5px solid var(--color-pink);
+    transition: 0.3s ease-in-out 0.3s;
+  }
+
+  .modal_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .addToCart {
+    font-family: "karla";
+    font-size: .75rem;
+    letter-spacing: 2px;
+    color: var(--color-screen);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 20rem;
+    background-color: var(--color-pink);
+    border: 1px solid var(--color-pink);
+  }
+
+  .addToCart:hover {
+    color: var(--color-pink);
+    background-color: var(--color-screen);
+    border: 1px solid var(--color-pink);
+    transition: 0.3s ease-in-out 0.3s;
+  }
+
+  .viewDetail {
+    font-family: "karla";
+    font-size: .75rem;
+    letter-spacing: 2px;
+    color: var(--color-pink);
+    margin: 0.5rem;
+    padding: 0.5rem;
+    width: 15rem;
+    background-color: var(--color-screen);
+    border: 1px solid var(--color-pink);
+  }
+
+  .viewDetail:hover {
+    color: var(--color-screen);
+    background-color: var(--color-pink);
+    border: 1px solid var(--color-pink);
+    transition: 0.3s ease-in-out 0.3s;
+  }
 
 
 /* tablet */
@@ -227,7 +392,7 @@ p.product_desc {
       font-size: 1rem;
     }
 
-    .quickshop_box {
+    .quickshop_button {
         padding: .5rem;
         font-size: 16px;
         text-align: center;
@@ -256,5 +421,3 @@ p.product_desc {
         max-width: 100%;
     }
     }
-    
-    
