@@ -78,7 +78,7 @@ a:visited {
 }
 
 .quickshopGif {
-  max-width: 100%;
+  min-width: 100%;
   padding: .5rem;
   margin: .5rem;
 }
