@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200&display=swap" rel="stylesheet">
-    <title> Ella Fromherz Alpha Build </title>
+    <title> Ella Fromherz Beta </title>
   </head>
 
   <body>
@@ -22,7 +22,7 @@
      </div> -->
 
     
-    <div class="product_card">
+    <!-- <div class="product_card">
 
       <div class="image_container">
         <img class="image" src="images/img1.png" alt="Image 1">
@@ -72,18 +72,23 @@
         </div>
         
       </div>
-    </div>
+    </div> -->
 
     <ul>
      <li><a href="https://www.freepeople.com/whats-new/" target="_blank" class="hover-link"> Link to Free People product page </a></li> 
       
       <h3>Triggers</h3>  
-      <li>The microinteraction is triggered when a user hovers over the product image.</li>
+      <p>hover</p>
+      <li>The microinteraction is triggered when a user clicks on the over the product image.</li>
       <li>The microinteraction is triggered when a user hovers off the product image.</li>
       <li>The microinteraction is triggered when a user hovers over the heart button.</li>
       <li>The microinteraction is triggered when a user hovers off the heart button.</li>
       <li>The microinteraction is triggered when a user hovers over the "Quickshop" button.</li>
       <li>The microinteraction is triggered when a user hovers off the "Quickshop" button.</li>
+      <p>click</p>
+      <li>The microinteraction is triggered when a user clicks on "Quickshop" button.</li>
+      <li>The microinteraction is triggered when a user clicks on the close button.</li>
+      <li>The microinteraction is triggered when a user off of the "Quickshop" modal.</li>
       
       <h3>Rules</h3>     
        <p>hover on</p>
@@ -103,6 +108,13 @@
       <li> Another small button, a circle with a heart outline, also disappears when hovering off</li>
       <li> The heart in the heart button changes (slowly fades) from a pink color to a grey color. </li>
       <li> "Qickshop" changes (slowly fades) from a pink color to a grey color. </li>
+
+      <p>click on</p>
+      <li>A product modal opens (expands out from middle) displaying additional product information not seen on the product card.</li>
+      <li>Page behind modal is blurred/has a tan overlay</li>
+
+      <p>click off</p>
+      <li>When clicking the x or off the modal, the product modal closes, returning to origional product page</li>
      
 
       <h3>Feedback</h3>  
@@ -123,20 +135,34 @@
       <li> Another small button, a circle with a heart outline, also disappears when hovering off</li>
       <li> The heart in the heart button changes (slowly fades) from a pink color to a grey color. </li>
       <li> "Qickshop" changes (slowly fades) from a pink color to a grey color. </li>
+
+      <p>click on</p>
+      <li>A product modal opens (expands out from middle) displaying additional product information not seen on the product card.</li>
+      <li>Page behind modal is blurred/has a tan overlay</li>
+
+      <p>click off</p>
+      <li>When clicking the x or off the modal, the product modal closes, returning to origional product page</li>
+     
       
 
       <h3>Loops & Modes</h3> 
+      <p>hover</p>
       <li>New buttons, "Quickshop" and the heart button with separate options appear after a user hovers over a product image.</li>
       <li> The "Quickshop" and the heart button disapear after a user hovers off a product image.</li>
 
-      <h3>Improvements</h3> 
+      <p>click</p>
+      <li>When modal opens, new buttons, "add to cart" and "view full details" appear, along with the product image, 
+        title, price, sizing options, and color options depending on product.</li>
+      <li>When modal is closed, "add to cart" and "view full details" disapear, along with the product image, 
+        title, price, sizing options, and color options depending on product.</li>
+      <!-- <h3>Improvements</h3> 
       <li> There is now a fade transition when hovering over/off of the product image (Used to be a hard switch). </li>
-    </ul>
+    </ul> -->
 
     <h3>hover on / click to quickshop</h3>
-    <img
+    <img class="quickshopGif"
     src="images/quickshop.gif"
-    alt="quickshop gif">
+    alt="quickshop gif" >
 
     <!--<h3>click on</h3>
     <img

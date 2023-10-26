@@ -77,6 +77,11 @@ a:visited {
     text-decoration: none;
 }
 
+.quickshopGif {
+  max-width: 100%;
+  padding: .5rem;
+  margin: .5rem;
+}
 
 /* MICRO INTERACTION */
 
@@ -194,6 +199,7 @@ p.product_desc {
     color: var(--color-text);
     font-size: 1rem;
 }
+
 
 /* modal */
 .modal {
@@ -389,6 +395,10 @@ p.product_desc {
     .image-container {
         max-width: 100%;
     }
+
+    .quickshopGif {
+      max-width: 95%;
+    }
     }
     
   
@@ -440,6 +450,10 @@ p.product_desc {
     p{
         font-size: 16px;
         max-width: 20ch;    
+    }
+
+    .quickshopGif {
+      max-width: 95%;
     }
     
 
