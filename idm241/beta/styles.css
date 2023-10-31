@@ -77,8 +77,8 @@ a:visited {
     text-decoration: none;
 }
 
-.quickshopGif {
-  min-width: 100%;
+img {
+  min-width: 80%;
   padding: .5rem;
   margin: .5rem;
 }
@@ -396,7 +396,7 @@ p.product_desc {
         max-width: 100%;
     }
 
-    .quickshopGif {
+    img {
       max-width: 95%;
     }
     }
@@ -452,7 +452,7 @@ p.product_desc {
         max-width: 20ch;    
     }
 
-    .quickshopGif {
+    img {
       max-width: 95%;
     }
     
