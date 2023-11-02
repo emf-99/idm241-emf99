@@ -28,7 +28,7 @@
         <img class="image" src="images/img1.png" alt="Image 1">
         <img class="hover_image" src="images/img2.png" alt="Image 2">
         <button class="quickshop_button">Quickshop</button>
-        <div class="favorites_button">♡</div>
+        <div class="favorites_button" id="favoritesButton" data-favorite="false">♡</div>
       </div>
 
       <div class="product_text">
@@ -75,120 +75,96 @@
     </div> 
 
     <ul>
-     <!-- <li><a href="https://www.freepeople.com/whats-new/" target="_blank" class="hover-link"> Link to Free People product page </a></li> -->
-      
-      <h3>Triggers</h3>  
-      <p>hover</p>
-      <li>The microinteraction is triggered when a user clicks on the over the product image.</li>
-      <li>The microinteraction is triggered when a user hovers off the product image.</li>
-      <li>The microinteraction is triggered when a user hovers over the heart button.</li>
-      <li>The microinteraction is triggered when a user hovers off the heart button.</li>
-      <li>The microinteraction is triggered when a user hovers over the "Quickshop" button.</li>
-      <li>The microinteraction is triggered when a user hovers off the "Quickshop" button.</li>
-      
-      <p>click (quickshop)</p>
-      <li>The microinteraction is triggered when a user clicks on "Quickshop" button.</li>
-      <li>The microinteraction is triggered when a user clicks on the close button.</li>
-      <li>The microinteraction is triggered when a user off of the "Quickshop" modal.</li>
-      
-      <p>click (favorites)</p>
-      <li>The microinteraction is triggered when a user clicks on the heart button.</li>
-      
-      
-      <h3>Rules</h3>     
-       <p>hover on</p>
-      <li> The cursor changes from a pointer to a hand pointer when hovering over. </li>
-      <li> The image fades from a more model centric photo to a photo that highlights the product. </li>
-      <li> The Product Name color changes from dark grey to pink. </li>
-      <li> A banner appears on the bottom of the product image giving the user the option to "Quickshop." </li>
-      <li> Another small button, a circle with a heart outline, also appears where a user can add an item to their wishlist.</li>
-      <li> The heart in the heart button changes (slowly fades) from a grey color to a pink color. </li>
-      <li> "Qickshop" changes (slowly fades) from a grey color to a pink color. </li>
-
-       <p>hover off</p>
-      <li> The cursor changes from a a hand pointer to a pointer when hovering off. </li>
-      <li> The image fades from a a photo that highlights the product to a more model centric photo. </li>
-      <li> The Product Name color changes from pink to dark grey </li>
-      <li> A "Quickshop" banner disappears from the bottom of the product image. </li>
-      <li> Another small button, a circle with a heart outline, also disappears when hovering off</li>
-      <li> The heart in the heart button changes (slowly fades) from a pink color to a grey color. </li>
-      <li> "Qickshop" changes (slowly fades) from a pink color to a grey color. </li>
-      
-      <p><strong><em>Quickshop</em></strong></p>
-      <p>click on</p>
-      <li>A product modal opens (expands out from middle) displaying additional product information not seen on the product card.</li>
-      <li>Page behind modal is blurred/has a tan overlay</li>
-
-      <p>click off</p>
-      <li>When clicking the x or off the modal, the product modal closes, returning to origional product page</li>
-
-      <p><strong><em>Favorites</em></strong></p>
-      <p>click on</p>
-      <li>The heart fills to solid pink</li>
-      <li>Quickshop button disapears</li>
-
-      <p>click off</p>
-      <li>After a user hovers or clicks off the product card after clicking the heart, the heart button stays over the product card and the heart is filled black</li>
-
-      
-      <h3>Feedback</h3>  
-        <p>hover on</p>
-      <li> The cursor changes from a pointer to a hand pointer when hovering over. </li>
-      <li> The image fades from a more model centric photo to a photo that highlights the product. </li>
-      <li> The Product Name color changes from dark grey to pink </li>
-      <li> A banner appears on the bottom of the product image giving the user the option to "Quickshop." </li>
-      <li> Another small button, a circle with a heart outline, also appears where a user can add an item to their wishlist.</li>
-      <li> The heart in the heart button changes (slowly fades) from a grey color to a pink color. </li>
-      <li> "Qickshop" changes (slowly fades) from a grey color to a pink color. </li>
-
-       <p>hover off</p>
-      <li> The cursor changes from a a hand pointer to a pointer when hovering off. </li>
-      <li> The fades changes from a a photo that highlights the product to a more model centric photo. </li>
-      <li> The Product Name color changes from pink to dark grey </li>
-      <li> A "Quickshop" banner disappears from the bottom of the product image. </li>
-      <li> Another small button, a circle with a heart outline, also disappears when hovering off</li>
-      <li> The heart in the heart button changes (slowly fades) from a pink color to a grey color. </li>
-      <li> "Qickshop" changes (slowly fades) from a pink color to a grey color. </li>
-
-      <p><strong><em>Quickshop</em></strong></p>
-      <p>click on</p>
-      <li>A product modal opens (expands out from middle) displaying additional product information not seen on the product card.</li>
-      <li>Page behind modal is blurred/has a tan overlay</li>
-
-      <p>click off</p>
-      <li>When clicking the x or off the modal, the product modal closes, returning to origional product page</li>
-
-      <p><strong><em>Favorites</em></strong></p>
-      <p>click on</p>
-      <li>The heart fills to solid pink</li>
-      <li>Quickshop button disapears</li>
-      
-
-      <p>click off</p>
-      <li>After a user hovers or clicks off the product card after clicking the heart, the heart button stays over the product card and the heart is filled black</li>
-
-      
-
-      <h3>Loops & Modes</h3> 
-      <p>hover</p>
-      <li>New buttons, "Quickshop" and the heart button with separate options appear after a user hovers over a product image.</li>
-      <li> The "Quickshop" and the heart button disapear after a user hovers off a product image.</li>
-
-      <p>click (quickshop)</p>
-      <li>When modal opens, new buttons, "add to cart" and "view full details" appear, along with the product image, 
-        title, price, sizing options, and color options depending on product.</li>
-      <li>When modal is closed, "add to cart" and "view full details" disapear, along with the product image, 
-        title, price, sizing options, and color options depending on product.</li>
-
-      <p>click (favorites)</p>
-      <li>After a user hovers or clicks off the product card after clicking the heart, the heart button stays over the product card and the heart is filled black</li>
-      <li>Product is added to a favorites list on the "favorites" page</li>
-
-
-
-      <h3>Improvements</h3> 
-      <li> There is now a fade transition when hovering over/off of the product image (Used to be a hard switch). </li>
-    </ul>
+      <!-- <li><a href="https://www.freepeople.com/whats-new/" target="_blank" class="hover-link"> Link to Free People product page </a></li>  -->
+       
+       <h3>Triggers</h3>  
+       <p>hover over/off</p>
+       <li>User hovers over or off the over the product image.</li>
+       <li>User hovers over or off the heart button.</li>
+       <li>User hovers over or off the "Quickshop" button.</li>
+       
+       <p>click</p>
+       <li>User clicks on "Quickshop" button.</li>
+       <li>User clicks on the close button on modal or off of the "Quickshop" modal.</li>
+       <li>User clicks on the heart button.</li>
+       
+       
+       <h3>Rules</h3>     
+        <p>hover over</p>
+       <li> When hovering over product image, the cursor changes to a hand pointer. </li>
+       <li> When hovering over product image, the image fades to a photo that highlights the product. </li>
+       <li> When hovering over product image, the Product Name color changes to pink. </li>
+       <li> When hovering over product image, a "Quickshop" button appears on the bottom of the image. </li>
+       <li> When hovering over product image, a Favorites button appears in the top right corner.</li>
+       <li> When hovering over the favorites button, the heart slowly fades to a pink color. </li>
+       <li> When hovering over the Quickshop button, "Qickshop" slowly fades to a pink color. </li>
+ 
+        <p>hover off</p>
+       <li> When hovering off product image, the cursor changes to a pointer. </li>
+       <li> When hovering off product image, the image fades to more model centric photo. </li>
+       <li> When hovering off product image, the Product Name color changes to dark grey </li>
+       <li> When hovering off product image, a "Quickshop" banner disappears from the bottom of the product image. </li>
+       <li> When hovering off product image, a Favorites button disappears from top right corner</li>
+       <li> When hovering off the favorites button, The heart slowly fades to a grey color. </li>
+       <li> When hovering over the Quickshop button, "Qickshop" slowly fades to a grey color. </li>
+       
+       <p><strong><em>Quickshop</em></strong></p>
+       <p>click on</p>
+       <li>A product modal opens (expands out from middle) displaying additional product information not seen on the product card.</li>
+       <li>Page behind modal is blurred/has a tan overlay</li>
+ 
+       <p><strong><em>Favorites</em></strong></p>
+       <p>click on</p>
+       <li>The heart fills to solid pink</li>
+       <li>Quickshop button disapears</li>
+       <li>Product is added to a favorites list on the "favorites" page</li>
+ 
+       
+       <h3>Feedback</h3>  
+       <p>hover over</p>
+       <li> When hovering over product image, the cursor changes to a hand pointer. </li>
+       <li> When hovering over product image, the image fades to a photo that highlights the product. </li>
+       <li> When hovering over product image, the Product Name color changes to pink. </li>
+       <li> When hovering over product image, a "Quickshop" button appears on the bottom of the image. </li>
+       <li> When hovering over product image, a Favorites button appears in the top right corner.</li>
+       <li> When hovering over the favorites button, the heart slowly fades to a pink color. </li>
+       <li> When hovering over the Quickshop button, "Qickshop" slowly fades to a pink color. </li>
+ 
+        <p>hover off</p>
+       <li> When hovering off product image, the cursor changes to a pointer. </li>
+       <li> When hovering off product image, the image fades to more model centric photo. </li>
+       <li> When hovering off product image, the Product Name color changes to dark grey </li>
+       <li> When hovering off product image, a "Quickshop" banner disappears from the bottom of the product image. </li>
+       <li> When hovering off product image, a Favorites button disappears from top right corner</li>
+       <li> When hovering off the favorites button, The heart slowly fades to a grey color. </li>
+       <li> When hovering over the Quickshop button, "Qickshop" slowly fades to a grey color. </li>
+       
+       <p><strong><em>Quickshop</em></strong></p>
+       <p>click on</p>
+       <li>A product modal opens (expands out from middle) displaying additional product information not seen on the product card.</li>
+       <li>Page behind modal is blurred/has a tan overlay</li>
+ 
+       <p><strong><em>Favorites</em></strong></p>
+       <p>click on</p>
+       <li>The heart fills to solid pink</li>
+       <li>Quickshop button disapears</li>
+       
+ 
+       <h3>Loops & Modes</h3> 
+       <li>No loops</li>
+       <p><em>Modes</em></p>
+       <li>New buttons, "Quickshop" and the heart button appear after a user hovers over a product image.</li>
+ 
+       <p>click (quickshop)</p>
+       <li>When modal opens, new buttons, "add to cart" and "view full details" appear, along with the product image, 
+         title, price, sizing options, and color options depending on product.</li>
+ 
+ 
+ 
+       <h3>Improvements</h3> 
+       <li> There is now a fade transition when hovering over/off of the product image (Used to be a hard switch). </li>
+    
+    </ul> 
 
     <!-- <h3>hover on / click to quickshop</h3>
     <img class="quickshopGif"
@@ -248,6 +224,29 @@
           closeModal();
         }
       });
+
+
+      // Get the heart button element
+      var favoritesButton = document.getElementById('favoritesButton');
+
+      // Function to toggle the filled_heart class with a delay
+      function toggleHeart() {
+        if (favoritesButton.innerHTML === '♡') {
+          setTimeout(function() {
+            favoritesButton.innerHTML = '♥︎'; // Change to heart symbol with a delay
+            favoritesButton.classList.add('filled_heart'); // Add the filled_heart class
+         }, 10); // Adjust the delay time as needed (e.g., 10 milliseconds)
+       } else {
+          favoritesButton.classList.remove('filled_heart'); // Remove the filled_heart class
+         setTimeout(function() {
+            favoritesButton.innerHTML = '♡'; // Change back to empty heart with a delay
+         }, 10); // Adjust the delay time as needed (e.g., 10 milliseconds)
+       }
+      }
+
+      // Event listener for clicking the heart button
+      favoritesButton.addEventListener('click', toggleHeart);
+
     </script>
     
   </body>
