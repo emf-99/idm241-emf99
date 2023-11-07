@@ -7,19 +7,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Karla:wght@200&display=swap" rel="stylesheet">
-    <title> Ella Fromherz Beta </title>
+    <title> Ella Fromherz Final </title>
   </head>
 
   <body>
 
-    <h1> Beta </h1>
-
-
-    <!-- <div class="product-card">
-      <div class="product-image">
-          <img src="images/img1.png" alt="hover photo">
-      </div>
-     </div> -->
+    <h1> Final </h1>
 
     
     <!-- <div class="product_card">
@@ -73,20 +66,26 @@
         
       </div>
     </div> -->
-
+  <div class="text">
     <ul>
-     <li><a href="https://www.freepeople.com/whats-new/" target="_blank" class="hover-link"> Link to Free People product page </a></li> 
-      
+      <li><a href="https://www.freepeople.com/whats-new/" target="_blank" class="hover-link"> Link to Free People product page </a></li>
+       
       <h3>Triggers</h3>  
       <p>hover over/off</p>
       <li>User hovers over or off the over the product image.</li>
       <li>User hovers over or off the heart button.</li>
       <li>User hovers over or off the "Quickshop" button.</li>
+      <li>User hovers over or off the size buttons.</li>
+      <li>User hovers over or off the "Add to Cart" button.</li>
+      <li>User hovers over or off the "View Full Details" button.</li>
       
       <p>click</p>
       <li>User clicks on "Quickshop" button.</li>
       <li>User clicks on the close button on modal or off of the "Quickshop" modal.</li>
       <li>User clicks on the heart button.</li>
+      <li>User clicks on the size buttons.</li>
+      <li>User clicks on the "Add to Cart" button.</li>
+      
       
       
       <h3>Rules</h3>     
@@ -112,12 +111,25 @@
       <p>click on</p>
       <li>A product modal opens (expands out from middle) displaying additional product information not seen on the product card.</li>
       <li>Page behind modal is blurred/has a tan overlay</li>
+      <li>When clicking on "Add to Cart", the product is added to the cart on the "cart" page</li>
+      <li>When clicking on "Add to Cart", the text changes to "Added to Cart" in green, the button outline is green with a white fill</li>
+      <li>When clicking on a size, the product size is updated</li>
+      <li>When clicking on a size, the button changes to a black outline with white fill</li>
+
+      <p>hover</p>
+      <li>When hovering over product sizes, they change to a pink fill with a black outline</li>
+      <li>When hovering off product sizes, they change to a grey outline with light pink fill</li>
+      <li>When hovering over "Add to Cart", the button changes to a pink outline and white fill with pink text</li>
+      <li>When hovering off "Add to Cart", the button changes to a pink fill with white text</li>
+      <li>When hovering over "View Full Details", the button changes to a pink fill with white text.</li>
+      <li>When hovering off "View Full Details", the button changes to a pink outline and white fill with pink text</li>
 
       <p><strong><em>Favorites</em></strong></p>
       <p>click on</p>
       <li>The heart fills to solid pink</li>
-      <li>Quickshop button disapears</li>
+      <li>The "Quickshop" button disapears</li>
       <li>Product is added to a favorites list on the "favorites" page</li>
+
 
       
       <h3>Feedback</h3>  
@@ -143,11 +155,21 @@
       <p>click on</p>
       <li>A product modal opens (expands out from middle) displaying additional product information not seen on the product card.</li>
       <li>Page behind modal is blurred/has a tan overlay</li>
+      <li>When clicking on "Add to Cart", the text changes to "Added to Cart" in green, the button outline is green with a white fill</li>
+      <li>When clicking on a size, the button changes to a black outline with white fill</li>
+
+      <p>hover</p>
+      <li>When hovering over product sizes, they change to a pink fill with a black outline</li>
+      <li>When hovering off product sizes, they change to a grey outline with light pink fill</li>
+      <li>When hovering over "Add to Cart", the button changes to a pink outline and white fill with pink text</li>
+      <li>When hovering off "Add to Cart", the button changes to a pink fill with white text</li>
+      <li>When hovering over "View Full Details", the button changes to a pink fill with white text.</li>
+      <li>When hovering off "View Full Details", the button changes to a pink outline and white fill with pink text</li>
 
       <p><strong><em>Favorites</em></strong></p>
       <p>click on</p>
       <li>The heart fills to solid pink</li>
-      <li>Quickshop button disapears</li>
+      <li>The "Quickshop" button disapears</li>
       
 
       <h3>Loops & Modes</h3> 
@@ -156,24 +178,46 @@
       <li>New buttons, "Quickshop" and the heart button appear after a user hovers over a product image.</li>
 
       <p>click (quickshop)</p>
-      <li>When modal opens, new buttons, "add to cart" and "view full details" appear, along with the product image, 
+      <li>When modal opens, new buttons, "Add to Cart" and "View Full Details" appear, along with the product image, 
         title, price, sizing options, and color options depending on product.</li>
+ 
+       <!-- <h3>Improvements</h3> 
+       <li> There is now a fade transition when hovering over/off of the product image (Used to be a hard switch). </li>
+       <li> There is now a fade transition when hoving over/off of the quickshop and favorites buttons (Used to be a hard switch). </li>
+       <li> There is now a fade transition when clicking on/off of the quickshop when modal opens and closes (Used to be a hard switch). </li>
+       <li> There is now a fade transition when clicking on/off of the favorites button (Used to be a hard switch). </li>
+      </ul>  -->
+  </div>
 
+  <h3>Hover (image change)</h3>
+    <img
+    src="images/hover.png"
+    alt="hover">
 
-
-      <!-- <h3>Improvements</h3> 
-      <li> There is now a fade transition when hovering over/off of the product image (Used to be a hard switch). </li>
-    </ul> -->
-
-  <h3>Add to Favotites</h3>
+    <h3>Add to Favorites</h3>
     <img
     src="images/favorites.png"
-    alt="add to favs">
+    alt="add to favorites">
 
     <h3>Quickshop</h3>
     <img
     src="images/quickshop.png"
     alt="quickshop modal">
+
+    <h3>Select Size</h3>
+    <img
+    src="images/size.png"
+    alt="select size">
+
+    <h3>Add to Cart</h3>
+    <img
+    src="images/cart.png"
+    alt="add to cart">
+
+    <h3>View Full Details</h3>
+    <img
+    src="images/details.png"
+    alt="details">
 
 
     <script>
