@@ -111,6 +111,14 @@
       <p>click on</p>
       <li>A product modal opens (expands out from middle) displaying additional product information not seen on the product card.</li>
       <li>Page behind modal is blurred/has a tan overlay</li>
+      <li>When clicking on add to cart, the product is added to the cart on the "cart" page</li>
+      <li>When clicking on a size, the product size is updated and has a pink outline</li>
+
+      <p>hover</p>
+      <li>When hovering over product sizes, they change to a pink outline with a light grey fill</li>
+      <li>When hovering off product sizes, they change to a black outline</li>
+      <li>When hovering over add to cart and view full details, the buttons change to a pink outline and white fill with pink text</li>
+      <li>When hovering off add to cart and view full details, the buttons change to a pink fill with white text</li>
 
       <p><strong><em>Favorites</em></strong></p>
       <p>click on</p>
@@ -141,6 +149,13 @@
       <p>click on</p>
       <li>A product modal opens (expands out from middle) displaying additional product information not seen on the product card.</li>
       <li>Page behind modal is blurred/has a tan overlay</li>
+      <li>When clicking on a size, the size fades to have a pink outline</li>
+
+      <p>hover</p>
+      <li>When hovering over product sizes, they change to a pink outline with a light grey fill</li>
+      <li>When hovering off product sizes, they change to a black outline</li>
+      <li>When hovering over add to cart and view full details, the buttons change to a pink outline and white fill with pink text</li>
+      <li>When hovering off add to cart and view full details, the buttons change to a pink fill with white text</li>
 
       <p><strong><em>Favorites</em></strong></p>
       <p>click on</p>
@@ -165,32 +180,69 @@
 
     <script>
       // Get the modal and the button that opens it
-      var modal = document.getElementById('quickshopModal');
-      var quickshopButton = document.querySelector('.quickshop_button');
-    
+        var modal = document.getElementById('quickshopModal');
+        var quickshopButton = document.querySelector('.quickshop_button');
+
       // Get the <span> element that closes the modal
-      var close = document.querySelector('.close');
-    
+        var close = document.querySelector('.close');
+        var modal_content = document.querySelector('.modal_content'); 
+
       // Function to open the modal
-      function openModal() {
-        modal.style.display = 'block';
-      }
-    
-      // Function to close the modal
-      function closeModal() {
-        modal.style.display = 'none';
-      }
-    
-      // Event listeners
-      quickshopButton.addEventListener('click', openModal);
-      close.addEventListener('click', closeModal);
-    
-      // Close the modal if the user clicks anywhere outside of it
-      window.addEventListener('click', function (event) {
-        if (event.target == modal) {
-          closeModal();
+        function openModal() {
+          modal.style.display = 'block';
+          setTimeout(function () {
+            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            modal_content.style.opacity = 1; 
+            }, 10);
         }
-      });
+
+      // Function to close the modal
+        function closeModal() {
+          modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+          modal_content.style.opacity = 0; 
+          setTimeout(function () {
+            modal.style.display = 'none';
+
+            // Remove the 'selected' class from all size elements
+            sizeElements.forEach(function (sizeElement) {
+            sizeElement.classList.remove('selected');
+          });
+          }, 600);
+        }
+
+      // Event listeners
+        quickshopButton.addEventListener('click', openModal);
+        close.addEventListener('click', closeModal);
+
+      // Close the modal if the user clicks anywhere outside of it
+        window.addEventListener('click', function (event) {
+          if (event.target == modal) {
+            closeModal();
+          }
+        });
+
+
+        // Get all the size elements
+        var sizeElements = document.querySelectorAll('.size');
+
+      // Function to handle size selection
+        function handleSizeSelection(event) {
+          if (event.target.classList.contains('selected')) {
+      // If the clicked size is already selected, deselect it
+            event.target.classList.remove('selected');
+          } else {
+      // If a different size is clicked, deselect all and select the clicked size
+            sizeElements.forEach(function (sizeElement) {
+            sizeElement.classList.remove('selected');
+            });
+            event.target.classList.add('selected');
+          }
+        }
+
+      // Add a click event listener to each size element
+        sizeElements.forEach(function (sizeElement) {
+          sizeElement.addEventListener('click', handleSizeSelection);
+        });
 
 
       // Get the heart button element
@@ -200,14 +252,14 @@
       function toggleHeart() {
         if (favoritesButton.innerHTML === '♡') {
           setTimeout(function() {
-            favoritesButton.innerHTML = '♥︎'; // Change to heart symbol with a delay
-            favoritesButton.classList.add('filled_heart'); // Add the filled_heart class
-         }, 10); // Adjust the delay time as needed (e.g., 10 milliseconds)
+            favoritesButton.innerHTML = '♥︎'; 
+            favoritesButton.classList.add('filled_heart'); 
+         }, 10); 
        } else {
-          favoritesButton.classList.remove('filled_heart'); // Remove the filled_heart class
+          favoritesButton.classList.remove('filled_heart'); 
          setTimeout(function() {
-            favoritesButton.innerHTML = '♡'; // Change back to empty heart with a delay
-         }, 10); // Adjust the delay time as needed (e.g., 10 milliseconds)
+            favoritesButton.innerHTML = '♡'; 
+         }, 10); 
        }
       }
 
