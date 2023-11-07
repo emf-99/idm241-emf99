@@ -345,7 +345,7 @@ p.product_desc {
     letter-spacing: 2px;
     color: var(--color-screen);
     margin: 0.5rem;
-    padding: 0.5rem;
+    padding: 1rem;
     width: 20rem;
     background-color: var(--color-pink);
     border: 1px solid var(--color-pink);
@@ -517,7 +517,7 @@ p.product_desc {
       letter-spacing: 1px;
       color: var(--color-screen);
       margin: 0.25rem;
-      padding: 0.25rem;
+      padding: 0.5rem;
       width: 13rem;
     }
 
