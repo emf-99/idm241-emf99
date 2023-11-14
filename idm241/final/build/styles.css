@@ -23,8 +23,8 @@ h1 {
     font-family: 'Abril Fatface', cursive;
     letter-spacing: .05rem;
     line-height: 1.6;
-    margin: 1rem;
-    padding: 1rem;
+    margin: 0.25rem;
+    padding: 0.25rem;
 }
 
 h3, li { 
@@ -55,6 +55,15 @@ p {
     margin: .5rem;
     padding: .5rem;
 }
+
+.name {
+  font-family: 'Abril Fatface', cursive;
+  font-size: 1.25rem;
+  color:  var(--color-pink);
+  margin: .25rem;
+  padding: .25rem .25rem 1rem .25rem;
+}
+
 
 /* links */
 a.hover-link {
