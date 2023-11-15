@@ -66,9 +66,9 @@
               </div>
           
             <div class="modal_buttons">
-              <!-- <div class="sizeMessage" id="sizeMessage" style="color: red; display: none;">Please select a size</div> -->
+              <div class="sizeWarning" style="display: none;">Please select a size before adding to cart</div>
               <button class="addToCart">ADD TO CART</button>
-              <button class="viewDetail" id="addToCartButton">VIEW FULL DETAILS</button>
+              <button class="viewDetail">VIEW FULL DETAILS</button>
             </div>
           </div>
         </div>
@@ -214,7 +214,7 @@
         </ul>
     </div>
 
-    <script>
+     <!-- <script>
       // Get the modal and the button that opens it
         var modal = document.getElementById('quickshopModal');
         var quickshopButton = document.querySelector('.quickshop_button');
@@ -257,30 +257,6 @@
           }
         });
 
-
-        // Get all the size elements
-        var sizeElements = document.querySelectorAll('.size');
-
-      // Function to handle size selection
-        function handleSizeSelection(event) {
-          if (event.target.classList.contains('selected')) {
-      // If the clicked size is already selected, deselect it
-            event.target.classList.remove('selected');
-          } else {
-      // If a different size is clicked, deselect all and select the clicked size
-            sizeElements.forEach(function (sizeElement) {
-            sizeElement.classList.remove('selected');
-            });
-            event.target.classList.add('selected');
-          }
-        }
-
-      // Add a click event listener to each size element
-        sizeElements.forEach(function (sizeElement) {
-          sizeElement.addEventListener('click', handleSizeSelection);
-        });
-
-
       // Get the heart button element
       var favoritesButton = document.getElementById('favoritesButton');
 
@@ -302,33 +278,185 @@
       // Event listener for clicking the heart button
       favoritesButton.addEventListener('click', toggleHeart);
 
-      // Get the "Add to Cart" button in the modal
-      var addToCartButton = document.querySelector('.addToCart');
 
-      // Function to handle the "Add to Cart" button click
+      // Get all the size elements
+  var sizeElements = document.querySelectorAll('.size');
+
+// Function to handle size selection
+function handleSizeSelection(event) {
+  // Hide the warning text when a size is selected
+  document.querySelector('.sizeWarning').style.display = 'none';
+
+  if (event.target.classList.contains('selected')) {
+    // If the clicked size is already selected, deselect it
+    event.target.classList.remove('selected');
+  } else {
+    // If a different size is clicked, deselect all and select the clicked size
+    sizeElements.forEach(function (sizeElement) {
+      sizeElement.classList.remove('selected');
+    });
+    event.target.classList.add('selected');
+  }
+}
+
+// Add a click event listener to each size element
+sizeElements.forEach(function (sizeElement) {
+  sizeElement.addEventListener('click', handleSizeSelection);
+});
+
+var addToCartButton = document.querySelector('.addToCart');
+
+// Function to handle the "Add to Cart" button click
+function handleAddToCart() {
+    // Change the button style to indicate it's added to the cart
+    addToCartButton.classList.add('active');
+    addToCartButton.innerHTML = 'ADDED TO CART!';
+    addToCartButton.style.backgroundColor = 'white';
+    addToCartButton.style.color = 'green';
+    addToCartButton.style.border = '1px solid green';
+    addToCartButton.innerHTML = 'ADDED TO CART!';
+
+    // After 2 seconds, revert the button to its original state
+    setTimeout(function () {
+      addToCartButton.classList.remove('active');
+      addToCartButton.style.backgroundColor = ''; // Set to empty to remove inline style
+      addToCartButton.style.color = '';
+      addToCartButton.style.border = '';
+      addToCartButton.innerHTML = 'ADD TO CART';
+      }, 3000);
+}
+
+// Add a click event listener to the "Add to Cart" button
+addToCartButton.addEventListener('click', function () {
+    handleAddToCart();
+});
+    </script>  -->
+
+    <script>
+      // get the modal and the button that opens it
+      var modal = document.getElementById('quickshopModal');
+      var quickshopButton = document.querySelector('.quickshop_button');
+    
+      // get the <span> element that closes the modal
+      var close = document.querySelector('.close');
+      var modal_content = document.querySelector('.modal_content');
+    
+      // get the heart button element
+      var favoritesButton = document.getElementById('favoritesButton');
+    
+      // get all the size elements
+      var sizeElements = document.querySelectorAll('.size');
+    
+      // function to open the modal
+      function openModal() {
+        modal.style.display = 'block';
+        setTimeout(function () {
+          modal.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+          modal_content.style.opacity = 1;
+          document.querySelector('.sizeWarning').style.display = 'block';
+        }, 10);
+      }
+    
+      // function to close the modal
+      function closeModal() {
+        modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
+        modal_content.style.opacity = 0;
+        setTimeout(function () {
+          modal.style.display = 'none';
+    
+          // remove the 'selected' class from all size elements
+          sizeElements.forEach(function (sizeElement) {
+            sizeElement.classList.remove('selected');
+          });
+        }, 600);
+      }
+    
+      // event listeners
+      quickshopButton.addEventListener('click', openModal);
+      close.addEventListener('click', closeModal);
+    
+      // close the modal if the user clicks anywhere outside of it
+      window.addEventListener('click', function (event) {
+        if (event.target == modal) {
+          closeModal();
+        }
+      });
+    
+      // function to toggle the filled_heart class with a delay
+      function toggleHeart() {
+        if (favoritesButton.innerHTML === '♡') {
+          setTimeout(function () {
+            favoritesButton.innerHTML = '♥︎';
+            favoritesButton.classList.add('filled_heart');
+          }, 10);
+        } else {
+          favoritesButton.classList.remove('filled_heart');
+          setTimeout(function () {
+            favoritesButton.innerHTML = '♡';
+          }, 10);
+        }
+      }
+ 
+      favoritesButton.addEventListener('click', toggleHeart);
+    
+      // function to handle size selection
+      function handleSizeSelection(event) {
+        // get the warning message element
+        var sizeWarning = document.querySelector('.sizeWarning');
+
+        // hide the warning text when a size is selected with fade effect
+        if (sizeWarning) {
+          sizeWarning.style.opacity = '0';
+
+          setTimeout(function () {
+            sizeWarning.style.display = 'none';
+            sizeWarning.style.opacity = '1';
+          }, 500);
+        }
+
+        if (event.target.classList.contains('selected')) {
+          // if the clicked size is already selected, deselect it
+          event.target.classList.remove('selected');
+        } else {
+          // if a different size is clicked, deselect all and select the clicked size
+          sizeElements.forEach(function (sizeElement) {
+            sizeElement.classList.remove('selected');
+          });
+          event.target.classList.add('selected');
+        }
+      }
+
+    
+      sizeElements.forEach(function (sizeElement) {
+        sizeElement.addEventListener('click', handleSizeSelection);
+      });
+    
+      var addToCartButton = document.querySelector('.addToCart');
+    
+      // function to handle the "Add to Cart" button click
       function handleAddToCart() {
-        // Change the button style to indicate it's added to the cart
+        // change the button style to indicate it's added to the cart
+        addToCartButton.classList.add('active');
+        addToCartButton.innerHTML = 'ADDED TO CART!';
         addToCartButton.style.backgroundColor = 'white';
         addToCartButton.style.color = 'green';
         addToCartButton.style.border = '1px solid green';
         addToCartButton.innerHTML = 'ADDED TO CART!';
-
-        // After 2 seconds, revert the button to its original state
-        setTimeout(function () {
-         addToCartButton.style.backgroundColor = 'var(--color-pink)';
-         addToCartButton.style.color = 'var(--color-screen)';
-         addToCartButton.style.border = '1px solid var(--color-pink)';
-         addToCartButton.innerHTML = 'ADD TO CART';
-        }, 4000);
-
-}
-
-// Add a click event listener to the "Add to Cart" button
-addToCartButton.addEventListener('click', handleAddToCart); 
-
-      
-
-    </script>
     
+        // after 3 seconds, revert the button to its original state
+        setTimeout(function () {
+          addToCartButton.classList.remove('active');
+          addToCartButton.style.backgroundColor = ''; 
+          addToCartButton.style.color = '';
+          addToCartButton.style.border = '';
+          addToCartButton.innerHTML = 'ADD TO CART';
+        }, 3000);
+      }
+    
+      addToCartButton.addEventListener('click', function () {
+        handleAddToCart();
+      });
+    </script>    
+
   </body>
 </html>
