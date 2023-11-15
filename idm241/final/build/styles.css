@@ -511,6 +511,12 @@ p.product_desc {
       color: var(--color-text);
     }
 
+
+    .sizeWarning {
+      font-size: .5rem;
+      color: red;
+    }
+
     .sizes, .product_colors {
       margin: 0rem 0.25rem 0.25rem 0rem;
       padding: 0rem 0.25rem 0.25rem 0.25rem;

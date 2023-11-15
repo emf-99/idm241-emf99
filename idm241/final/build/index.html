@@ -128,6 +128,7 @@
         <li>When clicking on "Add to Cart", the product is added to the cart on the "cart" page</li>
         <li>When clicking on "Add to Cart", the text changes to "Added to Cart" in green, the button outline is green with a white fill</li>
         <li>When clicking on a size, the product size is updated</li>
+        <li>When clicking on a size, the message urging users to select a size fades away</li>
         <li>When clicking on a size, the button changes to a pink outline with a grey fill</li>
         <li>When clicking on the close button, the modal disapears</li>
   
@@ -177,6 +178,7 @@
         <li>Page behind modal is blurred/has a tan overlay</li>
         <li>When clicking on "Add to Cart", the text changes to "Added to Cart" in green, the button outline is green with a white fill</li>
         <li>When clicking on a size, the product size is updated</li>
+        <li>When clicking on a size, the message urging users to select a size fades away</li>
         <li>When clicking on a size, the button changes to a pink outline with a grey fill</li>
         <li>When clicking on the close button, the modal disapears</li>
   
@@ -204,133 +206,19 @@
   
         <p>click (quickshop)</p>
         <li>When modal opens, new buttons, "Add to Cart" and "View Full Details" appear, along with the product image, 
-          title, price, sizing options, and color options depending on product.</li>
+          title, price, sizing options, color options (depending on product), and a message urging users to select a size fade in with modal</li>
    
          <h3>Improvements</h3> 
          <li> There is now a fade transition when hovering over/off of the product image (Used to be a hard switch). </li>
+         <li> There is now a fade transition to the color of the product name below the images when hovering over/off of the product image (Used to be a hard switch). </li>
          <li> There is now a fade transition when hoving over/off of the quickshop and favorites buttons (Used to be a hard switch). </li>
          <li> There is now a fade transition when clicking on/off of the quickshop when modal opens and closes (Used to be a hard switch). </li>
          <li> There is now a fade transition when clicking on/off of the favorites button (Used to be a hard switch). </li>
+         <li> There is now a fade transition when hovering on/off of the "Add to cart" and "View Full Details" buttons (Used to be a hard switch). </li>
+         <li> There is now a fade transition when clicking on/off of the "Add to cart" button (Used to be a hard switch). </li>
         </ul>
     </div>
 
-     <!-- <script>
-      // Get the modal and the button that opens it
-        var modal = document.getElementById('quickshopModal');
-        var quickshopButton = document.querySelector('.quickshop_button');
-
-      // Get the <span> element that closes the modal
-        var close = document.querySelector('.close');
-        var modal_content = document.querySelector('.modal_content'); 
-
-      // Function to open the modal
-        function openModal() {
-          modal.style.display = 'block';
-          setTimeout(function () {
-            modal.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
-            modal_content.style.opacity = 1; 
-            }, 10);
-        }
-
-      // Function to close the modal
-        function closeModal() {
-          modal.style.backgroundColor = 'rgba(0, 0, 0, 0)';
-          modal_content.style.opacity = 0; 
-          setTimeout(function () {
-            modal.style.display = 'none';
-
-            // Remove the 'selected' class from all size elements
-            sizeElements.forEach(function (sizeElement) {
-            sizeElement.classList.remove('selected');
-          });
-          }, 600);
-        }
-
-      // Event listeners
-        quickshopButton.addEventListener('click', openModal);
-        close.addEventListener('click', closeModal);
-
-      // Close the modal if the user clicks anywhere outside of it
-        window.addEventListener('click', function (event) {
-          if (event.target == modal) {
-            closeModal();
-          }
-        });
-
-      // Get the heart button element
-      var favoritesButton = document.getElementById('favoritesButton');
-
-      // Function to toggle the filled_heart class with a delay
-      function toggleHeart() {
-        if (favoritesButton.innerHTML === '♡') {
-          setTimeout(function() {
-            favoritesButton.innerHTML = '♥︎'; 
-            favoritesButton.classList.add('filled_heart'); 
-         }, 10); 
-       } else {
-          favoritesButton.classList.remove('filled_heart'); 
-         setTimeout(function() {
-            favoritesButton.innerHTML = '♡'; 
-         }, 10); 
-       }
-      }
-
-      // Event listener for clicking the heart button
-      favoritesButton.addEventListener('click', toggleHeart);
-
-
-      // Get all the size elements
-  var sizeElements = document.querySelectorAll('.size');
-
-// Function to handle size selection
-function handleSizeSelection(event) {
-  // Hide the warning text when a size is selected
-  document.querySelector('.sizeWarning').style.display = 'none';
-
-  if (event.target.classList.contains('selected')) {
-    // If the clicked size is already selected, deselect it
-    event.target.classList.remove('selected');
-  } else {
-    // If a different size is clicked, deselect all and select the clicked size
-    sizeElements.forEach(function (sizeElement) {
-      sizeElement.classList.remove('selected');
-    });
-    event.target.classList.add('selected');
-  }
-}
-
-// Add a click event listener to each size element
-sizeElements.forEach(function (sizeElement) {
-  sizeElement.addEventListener('click', handleSizeSelection);
-});
-
-var addToCartButton = document.querySelector('.addToCart');
-
-// Function to handle the "Add to Cart" button click
-function handleAddToCart() {
-    // Change the button style to indicate it's added to the cart
-    addToCartButton.classList.add('active');
-    addToCartButton.innerHTML = 'ADDED TO CART!';
-    addToCartButton.style.backgroundColor = 'white';
-    addToCartButton.style.color = 'green';
-    addToCartButton.style.border = '1px solid green';
-    addToCartButton.innerHTML = 'ADDED TO CART!';
-
-    // After 2 seconds, revert the button to its original state
-    setTimeout(function () {
-      addToCartButton.classList.remove('active');
-      addToCartButton.style.backgroundColor = ''; // Set to empty to remove inline style
-      addToCartButton.style.color = '';
-      addToCartButton.style.border = '';
-      addToCartButton.innerHTML = 'ADD TO CART';
-      }, 3000);
-}
-
-// Add a click event listener to the "Add to Cart" button
-addToCartButton.addEventListener('click', function () {
-    handleAddToCart();
-});
-    </script>  -->
 
     <script>
       // get the modal and the button that opens it
