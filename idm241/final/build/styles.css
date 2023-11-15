@@ -126,6 +126,7 @@ a:visited {
 /* on hover, text color changes to pink */
 .image_container:hover + .product_text .product_name {
     color: var(--color-pink);
+    transition: color 0.2s ease-in-out 0.2s;
     /* cursor: pointer; */
 }
 
@@ -145,6 +146,7 @@ a:visited {
     font-size: 1.25rem;
     letter-spacing: .05rem;
     border: none;
+    transition: color 0.2s ease-in-out 0.2s;
 }
 
 .quickshop_button:hover {
@@ -185,7 +187,7 @@ a:visited {
     justify-content: center;
     align-items: center;
     opacity: 0; 
-    transition: opacity 0.3s ease-in-out; 
+    transition: opacity 0.3s ease-in-out, color 0.2s ease-in-out 0.2s; 
 }
 
 .filled_heart {
@@ -197,6 +199,7 @@ a:visited {
 .image_container:hover .favorites_button {
     opacity: 1;
     cursor: pointer;
+    transition: color 0.2s ease-in-out 0.2s;
 }
 
 .favorites_button:hover {
@@ -208,14 +211,17 @@ a:visited {
 /* text for product and desc */
 h3.product_name {
     margin: 1rem 1rem 0rem 0rem;
-    padding: 0rem 0rem 0rem 0rem
+    padding: 0rem 0rem 0rem 0rem;
+    transition: color 0.2s ease-in-out 0.2s;
 }
+
 
 p.product_desc {
     margin:  0rem;
     padding: 0rem 0rem 0rem 0rem;
     color: var(--color-text);
     font-size: 1rem;
+    transition: color 0.2s ease-in-out 0.2s;
 }
 
 
@@ -333,6 +339,7 @@ p.product_desc {
     margin: .25rem;
     padding: 1rem;
     border: .5px solid var(--color-text);
+    transition: 0.2s ease-in-out 0.2s;
   }
 
   .size:hover {
@@ -366,22 +373,23 @@ p.product_desc {
     width: 20rem;
     background-color: var(--color-pink);
     border: 1px solid var(--color-pink);
+    transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;;
   }
 
-  .addToCart:hover {
+  .addToCart.active {
+    opacity: 0.75; 
+    pointer-events: none; 
+  }
+  
+
+  .addToCart:hover, 
+  .addToCart.active:hover {
     color: var(--color-pink);
     background-color: var(--color-screen);
     border: 1px solid var(--color-pink);
-    transition: 0.3s ease-in-out 0.3s;
+    transition:  0.5s ease-in-out 0.5s;
     cursor: pointer;
-  }
-
-  .addToCart:hover {
-    color: var(--color-pink);
-    background-color: var(--color-screen);
-    border: 1px solid var(--color-pink);
-    transition: 0.3s ease-in-out 0.3s;
-    cursor: pointer;
+    opacity: 1;
   }
 
   .viewDetail:hover {
@@ -390,6 +398,15 @@ p.product_desc {
     border: 1px solid var(--color-pink);
     transition: 0.3s ease-in-out 0.3s;
     cursor: pointer;
+  }
+
+  .sizeWarning {
+    display: none;
+    font-family: 'Karla', sans-serif;
+    font-size: .75rem;
+    color: red;
+    margin-top: .5rem;
+    transition: opacity 0.5s ease-in-out; 
   }
 
 
