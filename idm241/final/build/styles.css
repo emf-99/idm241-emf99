@@ -397,7 +397,6 @@ p.product_desc {
     background-color: var(--color-screen);
     border: 1px solid var(--color-pink);
     transition: 0.3s ease-in-out 0.3s;
-    cursor: pointer;
   }
 
   .sizeWarning {
