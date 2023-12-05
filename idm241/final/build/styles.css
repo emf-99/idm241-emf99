@@ -413,7 +413,7 @@ p.product_desc {
     background-color: var(--color-screen);
     border: 1px solid var(--color-pink);
     transition:  0.5s ease-in-out 0.5s;
-    cursor: pointer; 
+    /* cursor: pointer;  */
     opacity: 1;
   }
   
