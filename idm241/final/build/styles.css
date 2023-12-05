@@ -106,7 +106,7 @@ a:visited {
     max-width: 100%;
     height: auto;
     display: block;
-    transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.7s ease-in-out;
 }
 
 /* hide the hover image */
@@ -132,7 +132,7 @@ a:visited {
 
 /* quick shop button on bottom */
 .quickshop_button {
-    display: none;
+    /* display: none; */
     position: absolute;
     bottom: 0;
     left: 0;
@@ -146,7 +146,8 @@ a:visited {
     font-size: 1.25rem;
     letter-spacing: .05rem;
     border: none;
-    transition: color 0.2s ease-in-out 0.2s;
+    opacity: 0; 
+    transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out 0.5s; 
 }
 
 .quickshop_button:hover {
@@ -165,10 +166,34 @@ a:visited {
 }
 
 
-/* show "Quickshop" button when hovering */
-.image-container:hover .quickshop_button {
-  display: block;
+/* show "Quickshop" button when hovering 
+.image-container:hover, .quickshop_button {
+  opacity: 1;
   cursor: pointer;
+}*/
+
+/* Initially set opacity to 0 for both buttons */
+.quickshop_button,
+.favorites_button {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out;
+}
+
+/* Apply styles when hovering over the .image-container */
+.image_container:hover .quickshop_button{
+  opacity: 1;
+  cursor: pointer;
+}
+
+.image_container:hover .favorites_button {
+  opacity: 1;
+}
+
+/* Apply styles when hovering over the buttons individually */
+.quickshop_button:hover,
+.favorites_button:hover {
+  color: var(--color-pink);
+  transition: 0.3s ease-in-out;
 }
 
 /* favorites button on top */
@@ -187,7 +212,7 @@ a:visited {
     justify-content: center;
     align-items: center;
     opacity: 0; 
-    transition: opacity 0.3s ease-in-out, color 0.2s ease-in-out 0.2s; 
+    transition: opacity 0.5s ease-in-out, color 0.5s ease-in-out 0.5s; 
 }
 
 .filled_heart {
@@ -195,16 +220,16 @@ a:visited {
   transition: color 0.3s ease-in-out 0.3s;
 }
 
-/* show the favorites button when hovering */
+/* show the favorites button when hovering 
 .image_container:hover .favorites_button {
     opacity: 1;
     cursor: pointer;
-    transition: color 0.2s ease-in-out 0.2s;
-}
+    transition: color 0.5s ease-in-out 0.5s;
+}*/
 
 .favorites_button:hover {
     color: var(--color-pink);
-    cursor: pointer;
+    cursor: default;
     transition: 0.3s ease-in-out 0.3s;
 }
 
@@ -235,7 +260,7 @@ p.product_desc {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.7);
-    transition: background-color 0.6s ease-in-out; 
+    transition: background-color 0.8s ease-in-out; 
   }
   
   .modal_content {
@@ -247,7 +272,7 @@ p.product_desc {
     padding: 2rem;
     margin: 2rem;
     opacity: 0;
-    transition: opacity 0.6s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
   }
   
   .close {
@@ -258,7 +283,7 @@ p.product_desc {
     margin: 1rem;
     cursor: pointer;
     color: var(--color-text);
-    transition: color 0.6s ease-in-out; 
+    transition: color 0.8s ease-in-out; 
   }  
 
   .close:hover {
@@ -376,11 +401,11 @@ p.product_desc {
     transition: opacity 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out, border 0.3s ease-in-out;;
   }
 
-  .addToCart.active {
+
+   /* .addToCart.active {
     opacity: 0.75; 
     pointer-events: none; 
-  }
-  
+  }  */
 
   .addToCart:hover, 
   .addToCart.active:hover {
@@ -388,9 +413,10 @@ p.product_desc {
     background-color: var(--color-screen);
     border: 1px solid var(--color-pink);
     transition:  0.5s ease-in-out 0.5s;
-    cursor: pointer;
+    cursor: pointer; 
     opacity: 1;
   }
+  
 
   .viewDetail:hover {
     color: var(--color-pink);

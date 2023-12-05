@@ -93,7 +93,6 @@
         <p>click</p>
         <li>User clicks on "Quickshop" button.</li>
         <li>User clicks on the close button on modal or off of the "Quickshop" modal.</li>
-        <li>User clicks on the heart button.</li>
         <li>User clicks on the size buttons.</li>
         <li>User clicks on the "Add to Cart" button.</li>
         <li>User clicks on the close button.</li>
@@ -107,7 +106,7 @@
         <li> When hovering over product image, the Product Name color changes to pink. </li>
         <li> When hovering over product image, a "Quickshop" button appears on the bottom of the image. </li>
         <li> When hovering over product image, a Favorites button appears in the top right corner.</li>
-        <li> When hovering over the buttons "Quickshop" and Favorites, the cursor changes to a hand pointer. </li>
+        <li> When hovering over the button "Quickshop" the cursor changes to a hand pointer. </li>
         <li> When hovering over the favorites button, the heart slowly fades to a pink color. </li>
         <li> When hovering over the Quickshop button, "Qickshop" slowly fades to a pink color. </li>
   
@@ -117,7 +116,7 @@
         <li> When hovering off product image, the Product Name color changes to dark grey </li>
         <li> When hovering off product image, a "Quickshop" banner disappears from the bottom of the product image. </li>
         <li> When hovering off product image, a Favorites button disappears from top right corner</li>
-        <li> When hovering off the buttons "Quickshop" and Favorites, the cursor changes to a pointer. </li>
+        <li> When hovering off the button "Quickshop" the cursor changes to a pointer. </li>
         <li> When hovering off the favorites button, The heart slowly fades to a grey color. </li>
         <li> When hovering off the Quickshop button, "Qickshop" slowly fades to a grey color. </li>
         
@@ -144,11 +143,6 @@
         <li>When hovering off the close button, the circle around the X appears.</li>
         <li>When hovering off the buttons "Add to Cart", close, and sizes, the cursor changes to a pointer. </li>
   
-        <p><strong><em>Favorites</em></strong></p>
-        <p>click on</p>
-        <li>The heart fills to solid pink</li>
-        <li>Product is added to a favorites list on the "favorites" page / in the database</li>
-  
   
         
         <h3>Feedback</h3>  
@@ -157,8 +151,8 @@
         <li> When hovering over product image, the image fades to a photo that highlights the product. </li>
         <li> When hovering over product image, the Product Name color changes to pink. </li>
         <li> When hovering over product image, a "Quickshop" button appears on the bottom of the image. </li>
-        <li> When hovering over product image, a Favorites button appears in the top right corner.</li>
-        <li> When hovering over the buttons "Quickshop" and Favorites, the cursor changes to a hand pointer. </li>
+        <li> When hovering over product image, a Favorites button fades in the top right corner.</li>
+        <li> When hovering over the button "Quickshop" the cursor changes to a hand pointer. </li>
         <li> When hovering over the favorites button, the heart slowly fades to a pink color. </li>
         <li> When hovering over the Quickshop button, "Qickshop" slowly fades to a pink color. </li>
   
@@ -167,8 +161,8 @@
         <li> When hovering off product image, the image fades to more model centric photo. </li>
         <li> When hovering off product image, the Product Name color changes to dark grey </li>
         <li> When hovering off product image, a "Quickshop" banner disappears from the bottom of the product image. </li>
-        <li> When hovering off product image, a Favorites button disappears from top right corner</li>
-        <li> When hovering off the buttons "Quickshop" and Favorites, the cursor changes to a pointer. </li>
+        <li> When hovering off product image, a Favorites button fades from top right corner</li>
+        <li> When hovering off the button "Quickshop" the cursor changes to a pointer. </li>
         <li> When hovering off the favorites button, The heart slowly fades to a grey color. </li>
         <li> When hovering off the Quickshop button, "Qickshop" slowly fades to a grey color. </li>
         
@@ -193,10 +187,7 @@
         <li>When hovering over the close button, the X fades to pink.</li>
         <li>When hovering off the close button, the X fades to grey.</li>
         <li>When hovering off the buttons "Add to Cart", close, and sizes, the cursor changes to a pointer. </li>
-  
-        <p><strong><em>Favorites</em></strong></p>
-        <p>click on</p>
-        <li>The heart fills to solid pink</li>
+
         
   
         <h3>Loops & Modes</h3> 
@@ -256,7 +247,7 @@
           sizeElements.forEach(function (sizeElement) {
             sizeElement.classList.remove('selected');
           });
-        }, 600);
+        }, 700);
       }
     
       // event listeners
@@ -270,22 +261,22 @@
         }
       });
     
-      // function to toggle the filled_heart class with a delay
-      function toggleHeart() {
-        if (favoritesButton.innerHTML === '♡') {
-          setTimeout(function () {
-            favoritesButton.innerHTML = '♥︎';
-            favoritesButton.classList.add('filled_heart');
-          }, 10);
-        } else {
-          favoritesButton.classList.remove('filled_heart');
-          setTimeout(function () {
-            favoritesButton.innerHTML = '♡';
-          }, 10);
-        }
-      }
+      // // function to toggle the filled_heart class with a delay
+      // function toggleHeart() {
+      //   if (favoritesButton.innerHTML === '♡') {
+      //     setTimeout(function () {
+      //       favoritesButton.innerHTML = '♥︎';
+      //       favoritesButton.classList.add('filled_heart');
+      //     }, 10);
+      //   } else {
+      //     favoritesButton.classList.remove('filled_heart');
+      //     setTimeout(function () {
+      //       favoritesButton.innerHTML = '♡';
+      //     }, 10);
+      //   }
+      // }
  
-      favoritesButton.addEventListener('click', toggleHeart);
+      // favoritesButton.addEventListener('click', toggleHeart);
     
       // function to handle size selection
       function handleSizeSelection(event) {
@@ -318,7 +309,7 @@
       sizeElements.forEach(function (sizeElement) {
         sizeElement.addEventListener('click', handleSizeSelection);
       });
-    
+ 
       var addToCartButton = document.querySelector('.addToCart');
     
       // function to handle the "Add to Cart" button click
