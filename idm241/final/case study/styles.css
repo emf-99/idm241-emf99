@@ -18,16 +18,21 @@ body {
     padding: 1rem; 
 }
 
+.text {
+    margin: .5rem;
+    padding: .5rem;
+}
+
 /* fonts */
 h1 {
     font-family: 'Abril Fatface', cursive;
     letter-spacing: .05rem;
     line-height: 1.6;
-    margin: .5rem;
-    padding: .5rem;
+    margin: 1.5rem .5rem .25rem .5rem;
+    padding: .5rem .5rem .25rem .5rem;
 }
 
-h3, li { 
+h3 { 
     font-family: 'Abril Fatface', cursive;
     font-size: 1.25rem;
     margin: 2rem 0rem 0rem 0rem;
@@ -38,7 +43,7 @@ h3, li {
 li  {
     font-family: 'Karla', sans-serif;
     font-size: 1.25rem;
-    max-width: 80ch;
+    /* max-width: 80ch; */
     letter-spacing: .05rem;
     line-height: 1.6;
     margin: .5rem;
@@ -49,11 +54,11 @@ p {
     font-family: 'Karla', sans-serif;
     font-size: 1.25rem;
     color:  var(--color-text);
-    max-width: 80ch;
+    /* max-width: 80ch; */
     letter-spacing: .05rem;
     line-height: 1.6;
-    margin: .5rem;
-    padding: .5rem;
+    margin: .25rem .5rem .25rem .5rem;
+    padding: .25rem .5rem .25rem .5rem;
 }
 
 .name {
@@ -86,9 +91,12 @@ a:visited {
 }
 
 img {
-  max-width: 100%;
-  padding: .5rem;
-  margin: .5rem;
+    max-width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem;
+    display: block; /* Added this property */
+    margin-left: auto; /* Added these two properties for centering */
+    margin-right: auto;
 }
 
 
@@ -146,13 +154,13 @@ img {
       padding: .25rem;
     }
   
-    li {
+    /* li {
       font-size: 1rem;
-    }
+    } */
 
     p{
         font-size: 16px;
-        max-width: 20ch;    
+        /* max-width: 20ch;     */
     }
 
     img {
